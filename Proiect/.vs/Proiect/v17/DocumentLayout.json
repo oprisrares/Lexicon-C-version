@@ -1,0 +1,80 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\opris\\OneDrive\\Desktop\\Proiect_II\\II_Proiect\\Proiect\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB8C4DC-E540-4778-86CE-5B74FCAC8498}|Proiect\\Proiect.csproj|c:\\users\\opris\\onedrive\\desktop\\proiect_ii\\ii_proiect\\proiect\\proiect\\paginalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADB8C4DC-E540-4778-86CE-5B74FCAC8498}|Proiect\\Proiect.csproj|solutionrelative:proiect\\paginalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB8C4DC-E540-4778-86CE-5B74FCAC8498}|Proiect\\Proiect.csproj|C:\\Users\\opris\\OneDrive\\Desktop\\Proiect_II\\II_Proiect\\Proiect\\proiect\\paginalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ADB8C4DC-E540-4778-86CE-5B74FCAC8498}|Proiect\\Proiect.csproj|solutionrelative:proiect\\paginalogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB8C4DC-E540-4778-86CE-5B74FCAC8498}|Proiect\\Proiect.csproj|C:\\Users\\opris\\OneDrive\\Desktop\\Proiect_II\\II_Proiect\\Proiect\\proiect\\globale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADB8C4DC-E540-4778-86CE-5B74FCAC8498}|Proiect\\Proiect.csproj|solutionrelative:proiect\\globale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 32,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Globale.cs",
+              "DocumentMoniker": "C:\\Users\\opris\\OneDrive\\Desktop\\Proiect_II\\II_Proiect\\Proiect\\Proiect\\Globale.cs",
+              "RelativeDocumentMoniker": "Proiect\\Globale.cs",
+              "ToolTip": "C:\\Users\\opris\\OneDrive\\Desktop\\Proiect_II\\II_Proiect\\Proiect\\Proiect\\Globale.cs",
+              "RelativeToolTip": "Proiect\\Globale.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T08:49:57.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PaginaLogin.cs",
+              "DocumentMoniker": "C:\\Users\\opris\\OneDrive\\Desktop\\Proiect_II\\II_Proiect\\Proiect\\Proiect\\PaginaLogin.cs",
+              "RelativeDocumentMoniker": "Proiect\\PaginaLogin.cs",
+              "ToolTip": "C:\\Users\\opris\\OneDrive\\Desktop\\Proiect_II\\II_Proiect\\Proiect\\Proiect\\PaginaLogin.cs",
+              "RelativeToolTip": "Proiect\\PaginaLogin.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAIA3wCoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T08:49:21.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PaginaLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\opris\\OneDrive\\Desktop\\Proiect_II\\II_Proiect\\Proiect\\Proiect\\PaginaLogin.cs",
+              "RelativeDocumentMoniker": "Proiect\\PaginaLogin.cs",
+              "ToolTip": "C:\\Users\\opris\\OneDrive\\Desktop\\II_Proiect-Bianca\\Desktop\\Bianca\\II\\II_Proiect-rares-branch\\Proiect\\Proiect\\PaginaLogin.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\II_Proiect-Bianca\\Desktop\\Bianca\\II\\II_Proiect-rares-branch\\Proiect\\Proiect\\PaginaLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T08:45:32.043Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

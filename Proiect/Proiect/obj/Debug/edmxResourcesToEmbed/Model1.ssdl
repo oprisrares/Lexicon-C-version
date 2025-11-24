@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LibrarieModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Autoris">
+    <Key>
+      <PropertyRef Name="Cod_autor" />
+    </Key>
+    <Property Name="Cod_autor" Type="int" Nullable="false" />
+    <Property Name="Nume" Type="varchar(max)" Nullable="false" />
+    <Property Name="Nationalitate" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cartes">
+    <Key>
+      <PropertyRef Name="Cod_carte" />
+    </Key>
+    <Property Name="Cod_carte" Type="int" Nullable="false" />
+    <Property Name="Titlu" Type="varchar(max)" Nullable="false" />
+    <Property Name="Cod_autor" Type="int" Nullable="false" />
+    <Property Name="Cod_gen" Type="int" Nullable="false" />
+    <Property Name="Cod_edit" Type="int" Nullable="false" />
+    <Property Name="Descriere" Type="varchar(max)" />
+    <Property Name="Recenzie" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Conts">
+    <Key>
+      <PropertyRef Name="Cod_cont" />
+    </Key>
+    <Property Name="Cod_cont" Type="int" Nullable="false" />
+    <Property Name="Email" Type="varchar(max)" Nullable="false" />
+    <Property Name="Parola" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cos">
+    <Key>
+      <PropertyRef Name="ID_cos" />
+    </Key>
+    <Property Name="ID_cos" Type="int" Nullable="false" />
+    <Property Name="Cod_cont" Type="int" Nullable="false" />
+    <Property Name="Cod_carte" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Edituras">
+    <Key>
+      <PropertyRef Name="Cod_edit" />
+    </Key>
+    <Property Name="Cod_edit" Type="int" Nullable="false" />
+    <Property Name="Nume" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Gens">
+    <Key>
+      <PropertyRef Name="Cod_gen" />
+    </Key>
+    <Property Name="Cod_gen" Type="int" Nullable="false" />
+    <Property Name="Nume" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Librarie.dbo.Vedere_Carti' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Vedere_Carti">
+    <Key>
+      <PropertyRef Name="Cod_Carte" />
+      <PropertyRef Name="Titlu_Carte" />
+      <PropertyRef Name="Autor" />
+      <PropertyRef Name="Gen" />
+      <PropertyRef Name="Editura" />
+    </Key>
+    <Property Name="Cod_Carte" Type="int" Nullable="false" />
+    <Property Name="Titlu_Carte" Type="varchar(max)" Nullable="false" />
+    <Property Name="Autor" Type="varchar(max)" Nullable="false" />
+    <Property Name="Gen" Type="varchar(max)" Nullable="false" />
+    <Property Name="Editura" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Librarie.dbo.Vedere_Cos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Vedere_Cos">
+    <Key>
+      <PropertyRef Name="ID_Cos" />
+      <PropertyRef Name="Email_Utilizator" />
+      <PropertyRef Name="Titlu_Carte" />
+    </Key>
+    <Property Name="ID_Cos" Type="int" Nullable="false" />
+    <Property Name="Email_Utilizator" Type="varchar(max)" Nullable="false" />
+    <Property Name="Titlu_Carte" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Carte__Cod_autor__3D5E1FD2">
+    <End Role="Autoris" Type="Self.Autoris" Multiplicity="1" />
+    <End Role="Cartes" Type="Self.Cartes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Autoris">
+        <PropertyRef Name="Cod_autor" />
+      </Principal>
+      <Dependent Role="Cartes">
+        <PropertyRef Name="Cod_autor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Carte__Cod_edit__3F466844">
+    <End Role="Edituras" Type="Self.Edituras" Multiplicity="1" />
+    <End Role="Cartes" Type="Self.Cartes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Edituras">
+        <PropertyRef Name="Cod_edit" />
+      </Principal>
+      <Dependent Role="Cartes">
+        <PropertyRef Name="Cod_edit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Carte__Cod_gen__3E52440B">
+    <End Role="Gens" Type="Self.Gens" Multiplicity="1" />
+    <End Role="Cartes" Type="Self.Cartes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gens">
+        <PropertyRef Name="Cod_gen" />
+      </Principal>
+      <Dependent Role="Cartes">
+        <PropertyRef Name="Cod_gen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cos__Cod_carte__440B1D61">
+    <End Role="Cartes" Type="Self.Cartes" Multiplicity="1" />
+    <End Role="Cos" Type="Self.Cos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cartes">
+        <PropertyRef Name="Cod_carte" />
+      </Principal>
+      <Dependent Role="Cos">
+        <PropertyRef Name="Cod_carte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cos__Cod_cont__44FF419A">
+    <End Role="Conts" Type="Self.Conts" Multiplicity="1" />
+    <End Role="Cos" Type="Self.Cos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Conts">
+        <PropertyRef Name="Cod_cont" />
+      </Principal>
+      <Dependent Role="Cos">
+        <PropertyRef Name="Cod_cont" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LibrarieModelStoreContainer">
+    <EntitySet Name="Autoris" EntityType="Self.Autoris" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cartes" EntityType="Self.Cartes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Conts" EntityType="Self.Conts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cos" EntityType="Self.Cos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Edituras" EntityType="Self.Edituras" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gens" EntityType="Self.Gens" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vedere_Carti" EntityType="Self.Vedere_Carti" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Vedere_Carti].[Cod_Carte] AS [Cod_Carte], 
+[Vedere_Carti].[Titlu_Carte] AS [Titlu_Carte], 
+[Vedere_Carti].[Autor] AS [Autor], 
+[Vedere_Carti].[Gen] AS [Gen], 
+[Vedere_Carti].[Editura] AS [Editura]
+FROM [dbo].[Vedere_Carti] AS [Vedere_Carti]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Vedere_Cos" EntityType="Self.Vedere_Cos" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Vedere_Cos].[ID_Cos] AS [ID_Cos], 
+[Vedere_Cos].[Email_Utilizator] AS [Email_Utilizator], 
+[Vedere_Cos].[Titlu_Carte] AS [Titlu_Carte]
+FROM [dbo].[Vedere_Cos] AS [Vedere_Cos]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Carte__Cod_autor__3D5E1FD2" Association="Self.FK__Carte__Cod_autor__3D5E1FD2">
+      <End Role="Autoris" EntitySet="Autoris" />
+      <End Role="Cartes" EntitySet="Cartes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Carte__Cod_edit__3F466844" Association="Self.FK__Carte__Cod_edit__3F466844">
+      <End Role="Edituras" EntitySet="Edituras" />
+      <End Role="Cartes" EntitySet="Cartes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Carte__Cod_gen__3E52440B" Association="Self.FK__Carte__Cod_gen__3E52440B">
+      <End Role="Gens" EntitySet="Gens" />
+      <End Role="Cartes" EntitySet="Cartes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cos__Cod_carte__440B1D61" Association="Self.FK__Cos__Cod_carte__440B1D61">
+      <End Role="Cartes" EntitySet="Cartes" />
+      <End Role="Cos" EntitySet="Cos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cos__Cod_cont__44FF419A" Association="Self.FK__Cos__Cod_cont__44FF419A">
+      <End Role="Conts" EntitySet="Conts" />
+      <End Role="Cos" EntitySet="Cos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
